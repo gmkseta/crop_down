@@ -22,10 +22,10 @@ class ImageDownloader:
         is_conn_success = False
         while not is_conn_success:
             try:
-                self.conn = pymysql.connect(host="image-crawling-db.cmvxqjttnu3v.ap-northeast-2.rds.amazonaws.com",
-                                            user='nuua',
-                                            password=os.environ['NUUA_DB_PASS'],
-                                            db='image_crawling',
+                self.conn = pymysql.connect(host=host,
+                                            user=user,
+                                            password=password,
+                                            db=db,
                                             charset='utf8',
                                             cursorclass=pymysql.cursors.DictCursor)
             except Exception as e:
