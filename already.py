@@ -97,7 +97,7 @@ class ImageDownloader:
         self.sharding_no = str(self.index_no // 1000) + "/"
         for url_info in addr_list:
             if url_info['image_idx'] is not None :
-                file_address = url_info['image_idx']
+                file_address = url_info['file_address']
             else:
                 continue
 
