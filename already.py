@@ -5,6 +5,7 @@ import pymysql
 import pdb;
 import sys;
 from crop import crop_img
+from env_setting import host, user, password, db
 
 # DOWNLOAD_PATH = sys.argv[1]
 CROP_PATH = sys.argv[1]
