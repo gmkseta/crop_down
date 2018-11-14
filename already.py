@@ -95,8 +95,10 @@ class ImageDownloader:
     def download_crop(self, addr_list):
         self.sharding_no = str(self.index_no // 1000) + "/"
         for url_info in addr_list:
-
-            file_address = url_info['image_idx'] if url_info['image_idx'] is not None else continue
+            if url_info['image_idx'] is not None :
+                file_address = url_info['image_idx']
+            else:
+                continue
 
             # 파일명은 image_idx로 지정
             filename = str(self.index_no) + ".jpg"
